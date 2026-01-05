@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; }
+    header { background-color: #6987e9; color: #fff; text-align: center; padding: 1rem 0; }
+    .container { max-width: 800px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+    .cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding: 10px 0; }
+    .cart-item img { width: 50px; height: 50px; border-radius: 4px; margin-right: 10px; }
+    .cart-item span { flex: 1; }
+    .cart-item button { background-color: #ff4d4d; color: #fff; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
+    .cart-item button:hover { background-color: #cc0000; }
+    #totalAmount { margin-top: 20px; font-weight: bold; text-align: right; }
+  </style>
+  <script>
+    function renderCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartContainer = document.getElementById('cartItems');
+      const totalAmountDiv = document.getElementById('totalAmount');
+
+      if (cart.length === 0) {
+        cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+        totalAmountDiv.textContent = 'Total: ₹0';
+        return;
+      }
+
+      cartContainer.innerHTML = cart.map(item => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.name}">
+          <span>${item.name} - ₹${item.price.toFixed(2)} x ${item.quantity}</span>
+          <button onclick="removeFromCart('${item.name}')">Remove</button>
+        </div>
+      `).join('');
+
+      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      totalAmountDiv.textContent = `Total: ₹${total.toFixed(2)}`;
+    }
+
+    function removeFromCart(productName) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart = cart.filter(item => item.name !== productName);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderCart);
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>Your Cart</h1>
+</header>
+
+<div class="container">
+  <div id="cartItems"></div>
+  <div id="totalAmount">Total: ₹0</div>
+</div>
+
+<a href="index.html" style="display: block; text-align: center; margin: 20px;">Back to Products</a>
+
+</body>
+</html>

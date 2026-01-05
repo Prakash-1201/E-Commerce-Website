@@ -1,0 +1,104 @@
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f6f6;
+            /* color: #f3f3f3; */
+        }
+        
+        /* Header styles */
+        header {
+            text-align: center;
+            background-color: #f3f8f3;
+            color: rgb(8, 7, 7);
+            padding: 20px 0;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        
+        header p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+        
+        /* Grid container */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Product card */
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Product image */
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        /* Product title */
+        .product-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        /* Product description */
+        .product-description {
+            font-size: 1em;
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        /* Product price */
+        .product-price {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #6c757d;
+        }
+        
+        /* Buy button */
+        .buy-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+           
+            transition: background-color 0.3s;
+        }
+        
+        .buy-button:hover {
+            background-color: #218838;
+        }
+        .grayscale{
+            filter: grayscale(100%);
+        }
+        .grayscale-button{
+            cursor: not-allowed !important;
+        }
+        
+        

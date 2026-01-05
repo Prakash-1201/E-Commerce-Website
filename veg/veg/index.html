@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegetable Products</title>
+  <style>
+    /* Same styles as your provided code */
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: red rosybrown
+            
+        }
+
+        header {
+            background-color: #6987e9;
+            color: rgb(252, 250, 251);
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .product h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .product p {
+            color: #777;
+            margin: 0 0 10px;
+        }
+
+        .product button {
+            background-color: #4cafa5;
+            color: rgb(251, 253, 250);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color: #6e76e8;
+        }
+  </style>
+  <script>
+    // Function to add products to localStorage
+    function addToCart(productName, productPrice, productImage) {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingProduct = cart.find(item => item.name === productName);
+      if (existingProduct) {
+        existingProduct.quantity += 1;
+      } else {
+        cart.push({ name: productName, price: productPrice, image: productImage, quantity: 1 });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${productName} has been added to your cart.`);
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>Our Vegetable Products</h1>
+</header>
+
+<div class="container">
+  <!-- Add your products here -->
+  <div class="product">
+    <img src="carrot.jpeg" alt="Carrot">
+    <h3>Carrot</h3>
+    <p>Fresh and crunchy.</p>
+    <button onclick="addToCart('Carrot', 25, 'carrot.jpeg')">Add to Cart</button>
+  </div>
+  <div class="product">
+        <img src="tomato.jpeg" alt="Tomato">
+        <h3>Tomato</h3>
+        <p>Juicy and ripe.</p>
+        <button onclick="addToCart('Tomato', 30, 'tomato.jpeg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="cucumbar.jpeg" alt="Cucumber">
+        <h3>Cucumber</h3>
+        <p>Cool and crisp.</p>
+        <button onclick="addToCart('Cucumber', 20, 'cucumbar.jpeg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="broccole.jpg" alt="Broccoli">
+        <h3>Broccoli</h3>
+        <p>Rich in nutrients.</p>
+        <button onclick="addToCart('Broccoli', 50, 'broccole.jpg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="spinach.jpeg" alt="Spinach">
+        <h3>Spinach</h3>
+        <p>Full of iron.</p>
+        <button onclick="addToCart('Spinach', 50, 'spinach.jpeg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="potatoes.jpg" alt="Potato">
+        <h3>Potato</h3>
+        <p>Perfect for fries.</p>
+        <button onclick="addToCart('Potato', 50, 'potatoes.jpg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Onion.jpg" alt="Onion">
+        <h3>Onion</h3>
+        <p>Great for cooking.</p>
+        <button onclick="addToCart('Onion', 50, 'Onion.jpg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Capsicum.jpeg" alt="Capsicum">
+        <h3>Capsicum</h3>
+        <p>Colorful and tasty.</p>
+        <button onclick="addToCart('Capsicum', 20, 'Capsicum.jpeg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Lettuce.jpeg" alt="Lettuce">
+        <h3>Lettuce</h3>
+        <p>Fresh for salads.</p>
+        <button onclick="addToCart('Lettuce', 40, 'Lettuce.jpeg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Zucchini.webp" alt="Zucchini">
+        <h3>Zucchini</h3>
+        <p>Perfect for grilling.</p>
+        <button onclick="addToCart('Zucchini', 45, 'Zucchini.webp')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Cauliflower.jpeg" alt="Cauliflower">
+        <h3>Cauliflower</h3>
+        <p>Deliciously versatile.</p>
+        <button onclick="addToCart('Cauliflower', 30, 'Cauliflower.jpeg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Peas.jpeg" alt="Peas">
+        <h3>Peas</h3>
+        <p>Sweet and tender.</p>
+        <button onclick="addToCart('Peas', 20, 'Peas.jpeg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Corn.jpeg" alt="Corn">
+        <h3>Corn</h3>
+        <p>Golden and sweet.</p>
+        <button onclick="addToCart('Corn', 15, 'Corn.jpeg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Eggplant.jpg" alt="Eggplant">
+        <h3>Eggplant</h3>
+        <p>Rich and meaty.</p>
+        <button onclick="addToCart('Eggplant', 80, 'Eggplant.jpg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Garlic.jpeg" alt="Garlic">
+        <h3>Garlic</h3>
+        <p>Packed with flavor.</p>
+        <button onclick="addToCart('Garlic', 10, 'Garlic.jpeg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Ginger.jpeg" alt="Ginger">
+        <h3>Ginger</h3>
+        <p>Great for health.</p>
+        <button onclick="addToCart('Ginger', 50, 'Ginger.jpg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Chili.jpeg" alt="Chili">
+        <h3>Chili</h3>
+        <p>Spicy and bold.</p>
+        <button onclick="addToCart('Chili', 30, 'Chili.jpeg')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Pumpkin.webp" alt="Pumpkin">
+        <h3>Pumpkin</h3>
+        <p>Perfect for soups.</p>
+        <button onclick="addToCart('Pumpkin', 70, 'Pumpkin.webp')">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Beetroot.webp" alt="Beetroot">
+        <h3>Beetroot</h3>
+        <p>Rich in color.</p>
+        <button onclick="addToCart('Beetroot', 45, 'Beetroot.webp')">Add to Cart</button>
+    </div>
+
+  <!-- Add more products as needed -->
+</div>
+<a href="cart.html" style="display: block; text-align: center; margin: 20px;">Go to Cart</a>
+
+</body>
+</html>

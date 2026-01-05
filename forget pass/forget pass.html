@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Forgot Password Container */
+        .forgot-password-container {
+            background: linear-gradient(to right,white,aqua);;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ffe3d3;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            border-color: #ff7b54;
+            outline: none;
+        }
+
+        /* Button Styles */
+        .btn {
+            background: #ff7b54;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        input:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+        .btn:hover {
+            background: #ff523b;
+        }
+
+        /* Links */
+        .links {
+            margin-top: 15px;
+        }
+
+        .links a {
+            color: red;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        /* About Us Section */
+        .about-us {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            color: #333;
+        }
+
+        .about-us h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #ff7b54;
+        }
+
+        .about-us p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="forgot-password-container">
+        <h1>Forgot Password</h1>
+        <p>Enter your email and phone number to reset your password.</p>
+        <form action="../reset/reset.html">
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+            </div>
+            <button type="submit" class="btn">Reset Password</button>
+        </form>
+        <div class="links">
+            <a href="../login/login.html">Back to Login</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+
+    emailInput.addEventListener("input", () => {
+        if (emailInput.value.trim() !== "") {
+            phoneInput.disabled = true;
+        } else {
+            phoneInput.disabled = false;
+        }
+    });
+
+    phoneInput.addEventListener("input", () => {
+        if (phoneInput.value.trim() !== "") {
+            emailInput.disabled = true;
+        } else {
+            emailInput.disabled = false;
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

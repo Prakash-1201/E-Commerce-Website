@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Forgot Password Container */
+        .forgot-password-container {
+            background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #fffbe7;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #fffbe7;
+        }
+
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ffe3d3;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            border-color: #ff7b54;
+            outline: none;
+        }
+
+        /* Button Styles */
+        .btn {
+            background: #ff7b54;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff523b;
+
+        }
+
+        /* Links */
+        .links {
+            margin-top: 15px;
+        }
+
+        .links a {
+            color: #ffe3d3;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #fffbe7;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="forgot-password-container">
+        <h1>Reset Password</h1>
+       <p>Enter your new password to reset.</p>
+        <form>
+            <div class="form-group">
+                <label for="email">Enter new Password:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Re-enter Password:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Re-enter new password" pattern="[0-9]{10}" required>
+            </div>
+            <button class="btn" onclick="resetting();">Reset Password</button>
+        </form>
+        <div class="links">
+            <a href="../login/login.html">Back to Login</a>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    function resetting() {
+            alert("Password Reset Successfull...")
+            // body...
+        }
+</script>
+</body>
+</html>

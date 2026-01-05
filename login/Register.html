@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html >
+    <head>
+
+      <!-- <link rel="stylesheet" href="register.css"> -->
+      <style>body{
+         font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assests/images/ron.webp);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+        
+      }
+
+      
+      .container {
+        background: linear-gradient(to right,white,aqua);
+        margin: auto;
+        padding: 10px ;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+        width: 500px;
+        
+      }
+      
+      .header{
+        
+        display: flex;
+        color: black;
+        padding-left: 180px;
+        
+      
+      }
+      
+      h1 {
+        text-align: center;
+        
+        color: #333;
+      }
+      
+      label {
+        font-weight: bold;
+        color: #333;
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      
+      .registerbtn {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      
+      .registerbtn:hover {
+        background-color: #45a049;
+      }
+      
+      .signin {
+        text-align: center;
+        margin-top: 15px;
+      }
+      
+      .signin a {
+        color: #4CAF50;
+        text-decoration: none;
+      }
+      
+      .signin a:hover {
+        text-decoration: underline;
+      }
+      
+      *{
+        margin: 0%;
+        padding: 0%;
+      }
+      </style>
+
+    </head>
+    <body>
+      <div class="register">
+         <form action="login.html">
+            <div class="container">
+              <div class="header">
+                <header>
+                  <h1>Register</h1>
+                 </header>
+                </div>
+         
+              <!-- <p>Please fill in this form to create an account.</p> -->
+              <!-- <hr> -->
+
+              <label for="First Name "><br>First Name<span text-align:center; style="color: red;">*</span><br></label>
+              <input type="text" placeholder="Enter Name " name="name" id="name" required><br>
+
+              <label for="Last Name"><br>Last Name<span style="color: red;">*</span></br></label>
+              <input type="text" placeholder="Enter name " name="name" id="name" required> <br>
+
+              <label for="mobile number"><br>Mobile Number<span style="color: red;">*</span></br></label>
+              <input type="text" placeholder="Enter Number" name="number" id="number" required pattern="[789][0-9]{9}"> <br>
+          
+             <label FOR ="Email"><br>Email<span style="color: red;">*</span><br></label>
+             <input type="text" placeholder="Enter email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> <br>
+
+             <label for="psw"><br> Password<span style="color: red;">*</span></br></label>
+             <input type="password" placeholder="•••••••••" name="Password" id="password" required><br>
+         
+             <label for="psw-repeat"><br>Conform Password<span style="color: red;">*</span></br></label>
+             <input type="password" placeholder="•••••••••" name="Repeat password" id="Repeat Password" required><br>
+              <!-- <hr> -->
+
+          
+              <button type="submit" class="registerbtn">Register</button>
+            </div>
+          
+            <div class="container signin">
+              <p>Already have an account? <a href="login.html">login in</a>.</p>
+            </div>
+          </form>
+      </div>
+      
+    
+       
+        </body>
+</html>
+

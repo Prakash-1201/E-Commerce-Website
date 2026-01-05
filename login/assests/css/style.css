@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eee;
+}
+#header{
+    background-color: #2b2b2be6;
+    color: #fff !important;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.logo h1{
+    color: #a289d6;
+    text-transform: uppercase;
+}
+.logo img{
+    height: 100px;
+    width: 110px;
+    margin-left: 100px;
+    transition: 2s;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav ul li a{
+    padding: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+.nav ul li a:hover{
+    color: #87d8fb;
+}
+.ic i{
+    padding: 10px;
+    margin-right: 20px;
+    background-color:#87d8fb ;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+.ic i:hover{
+    color: #fff;
+}
+#banner{
+    background-image: url(../image/banner-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+}
+.banner-content h2{
+    padding: 10px;
+    font-size: 32px;
+    font-weight: 600;
+}
+.banner-content p{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    max-width: 55ch;
+}
+.banner-content button{
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: 2px solid #000;
+    border-radius: 3px;
+    background-color: orange;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 2s;
+}
+.banner-content button:hover{
+    background-color: #a289d6;
+}

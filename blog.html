@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="shortcut icon" href="./assests/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.0/nouislider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./assests/css/product.css">
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <style>
+        /* General reset */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Section styling */
+  section.blogs {
+    padding: 50px 20px;
+    background: #f9f9f9;
+  }
+  
+  /* Heading styling */
+  section.blogs .heading {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  section.blogs .heading span {
+    color: #ff6347; /* Highlight color */
+  }
+  
+  /* Box container styling */
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .box .content {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .box .content .icons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .box .content .icons a {
+    text-decoration: none;
+    color: #ff6347;
+    display: flex;
+    align-items: center;
+  }
+  
+  .box .content .icons a i {
+    margin-right: 5px;
+  }
+  
+  .box .content h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .box .content p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .box .content .btn {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    color: #fff;
+    background: #ff6347;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .box .content .btn:hover {
+    background: #e5533d;
+  }
+  
+  /* Center alignment for the heading */
+  section.blogs center {
+    text-align: center;
+  }
+  
+    </style>
+</head>
+<body>
+    <section id="header">
+        <div class="container-fluid">
+            <div class="contents">
+                <div id="logo">
+                    <div class="logo-animation"></div>
+                    <img src="./assests/images/logo.png" alt="logo">
+                    <!-- <h1><span style="color: #87d8fb;">Chap-Chap</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;Sapadu </h1> -->
+                </div>
+                <div id="nav">
+                    <ul>
+                        <li><a href="index.html" style="color: orange;">Home</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="./features.html">Features</a></li>
+                        <li>
+                            <a href="">Products</a>
+                            <!-- Dropdown menu for products -->
+                            <ul class="dropdown">
+                                <li><a href="">Fruits</a></li>
+                                <li><a href="./bakery/index.html">Bakery</a></li>
+                                <li><a href="">Dairy and Milk</a></li>
+                                <li><a href="./veg/veg/index.html">Vegetables</a></li>
+                                <li><a href="">Snacks and Spices</a></li>
+                                <li><a href="">Juices and Drinks</a></li>
+                                <li><a href="">Seafood</a></li>
+                                <li><a href="./fastfood/index.html">Fast Food</a></li>
+                                <li><a href="">Eggs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./categories.html">Categories</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./review.html">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div id="ic">
+                    <i class="fa fa-search"></i>
+                    <i class="fa fa-shopping-cart"></i>
+                    <a href="./login/login.html"> <i class="fa fa-user"></i></a>
+                  
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <section class="blogs" id="blog"><center>
+        <h1 class="heading" style="color: #000;"> Our <span> Blogs</span> </h1></center>
+        <div class="box-container">
+          <div class="box">
+            <img src="./assests/images/veg.webp" alt="market1" >
+            <div class="content">
+              <div class="icons">
+                <a href="#"> <i class="fas fa-user"></i> By user </a>
+                <a href="#"> <i class="fas fa-calendar"></i> 1st Apr, 2020 </a>
+              </div>
+              <h3>fresh , organic vegitables and fruits</h3>
+              <p>Get ready to taste the difference with our organic vegetables and fruits, grown without artificial additives or preservatives.</p>
+              <a href="#" class="btn">read more</a>
+            </div>
+          </div>
+          <div class="box">
+            <img src="https://as2.ftcdn.net/jpg/05/66/07/31/1000_F_566073169_A0tOPYkqAMkam55PMm1FC63HgdzNbPcd.jpg" alt="market1" >
+            <div class="content">
+              <div class="icons">
+                <a href="#"> <i class="fas fa-user"></i> By user </a>
+                <a href="#"> <i class="fas fa-calendar"></i> 1st Apr, 2020 </a>
+              </div>
+              <h3>fresh and organic vegitables and fruits</h3>
+              <p>Get ready to taste the difference with our organic vegetables and fruits, grown without artificial additives or preservatives.</p>
+              <a href="#" class="btn">read more</a>
+            </div>
+          </div>
+          <div class="box">
+            <img src="https://media.istockphoto.com/id/1450329221/photo/at-the-fruit-and-vegetable-store.jpg?s=612x612&w=0&k=20&c=Yxfu6C52aU_WSTRWAsTDe42SfliidhX6LwLLp-KWYOM=" alt="blog-3">
+            <div class="content">
+              <div class="icons">
+                <a href="#"> <i class="fas fa-user"></i> By user </a>
+                <a href="#"> <i class="fas fa-calendar"></i> 1st Apr, 2020 </a>
+              </div>
+              <h3>fresh and organic vegitables and fruits</h3>
+              <p>Get ready to taste the difference with our organic vegetables and fruits, grown without artificial additives or preservatives.</p>
+              <a href="#" class="btn">read more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Footer Start -->
+<footer class="ms-footer m-t-30">
+    <div class="footer-container">
+        <div class="footer-top padding-tb-60">
+            <div class="container">
+                <div class="row m-minus-991">
+                    <div class="col-sm-12 col-lg-5 ms-footer-cat">
+                        <div class="ms-footer-widget ms-footer-company">
+                            <img src="assests/images/logo.png" class="ms-footer-logo" alt="footer logo">
+                            <p class="ms-footer-detail">Chap - Chap Sapadu is the market of grocery products. Get your daily needs from our store.</p>
+                           
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-2 ms-footer-info">
+                        <div class="ms-footer-widget">
+                            <h4 class="ms-footer-heading">Category</h4>
+                            <div class="ms-footer-links ms-footer-dropdown">
+                                <ul class="align-items-center">
+                                    <li class="ms-footer-link"><a href="#">Dairy & Milk</a></li>
+                                    <li class="ms-footer-link"><a href="shop-banner-left-sidebar-col-3.html">Snack & Spice</a></li>
+                                    <li class="ms-footer-link"><a href="shop-full-width-col-5.html">Fast Food</a></li>
+                                    <li class="ms-footer-link"><a href="shop-list-left-sidebar.html">Juice & Drinks</a></li>
+                                    <li class="ms-footer-link"><a href="shop-list-full-col-2.html">Bakery</a></li>
+                                    <li class="ms-footer-link"><a href="shop-banner-right-sidebar-col-4.html">Seafood</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-2 ms-footer-account">
+                        <div class="ms-footer-widget">
+                            <h4 class="ms-footer-heading">Company</h4>
+                            <div class="ms-footer-links ms-footer-dropdown">
+                                <ul class="align-items-center">
+                                    <li class="ms-footer-link"><a href="about-us.html">About us</a></li>
+                                    <li class="ms-footer-link"><a href="track-order.html">Delivery</a></li>
+                                    <li class="ms-footer-link"><a href="privacy-policy.html">Legal Notice</a></li>
+                                    <li class="ms-footer-link"><a href="terms-condition.html">Terms & conditions</a></li>
+                                    <li class="ms-footer-link"><a href="checkout.html">Secure payment</a></li>
+                                    <li class="ms-footer-link"><a href="contact-us.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-sm-12 col-lg-3 ms-footer-cont-social">
+                        <div class="ms-footer-contact">
+                            <div class="ms-footer-widget">
+                                <h4 class="ms-footer-heading">Contact</h4>
+                                <div class="ms-footer-links ms-footer-dropdown">
+                                    <ul class="align-items-center">
+                                        <li class="ms-footer-link ms-foo-location"><span><img
+                                                    src="assests/images/icons/foo-location.svg" class="svg_img foo_svg"
+                                                    alt=""></span>
+                                            <p>Electronic City, Bangalore.</p>
+                                        </li>
+                                        <li class="ms-footer-link ms-foo-call"><span><img
+                                                    src="assests/images/icons/foo-wp.svg" class="svg_img foo_svg"
+                                                    alt=""></span><a href="tel:+009876543210">+91 9845678935</a>
+                                        </li>
+                                        <li class="ms-footer-link ms-foo-mail"><span><img
+                                                    src="assests/images/icons/foo-mail.svg" class="svg_img foo_svg"
+                                                    alt=""></span><a href="mailto:example@email.com">example@email.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ms-footer-social">
+                            <div class="ms-footer-widget">
+                                <div class="ms-footer-links ms-footer-dropdown">
+                                    <ul class="align-items-center">
+                                        <li class="ms-footer-link"><a href="#"><i class="msicon msi-instagram" aria-hidden="true"></i></a></li>
+                                        <li class="ms-footer-link"><a href="#"><i class="msicon msi-twitter-square" aria-hidden="true"></i></a></li>
+                                        <li class="ms-footer-link"><a href="#"><i class="msicon msi-facebook-square" aria-hidden="true"></i></a></li>
+                                        <li class="ms-footer-link"><a href="#"><i class="msicon msi-linkedin-square" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="ms-bottom-info">
+                        <!-- Footer Copyright Start -->
+                        <div class="footer-copy">
+                            <div class="footer-bottom-copy ">
+                                <div class="ms-copy">Copyright © <a class="site-name" href="index.html">Team I</a> all rights reserved. Powered by Chap Chap Sapadu.</div>
+                            </div>
+                        </div>
+                        <!-- Footer Copyright End -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Area End -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

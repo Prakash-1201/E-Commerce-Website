@@ -1,0 +1,57 @@
+*{
+margin:10;
+padding:10;
+box-sizing:border-box;
+font-family: poppins, sans-serif ;
+}
+body{
+ background-image: url("veg.webp");
+background-position: center;
+background-size: cover;
+background-attachment:fixed;
+background-repeat: no-repeat;
+display:flex;
+align-items:center;
+justify-content: center;
+min-height:100vh;
+padding:5px 20px;
+
+}
+/* .sign-container {
+    background-image: url(veg.webp);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 280px;
+    text-align: center;
+  } */
+.hello{
+border:8px solid rgb(239, 235, 235);
+margin:50px;
+background-color:"yellow";
+}
+.wow{
+border-radius:10px;
+}
+.img{
+color:"blue";
+}
+.placeholder{
+text-align:center;
+color:black;
+}
+.back{
+ background: Red;
+}
+.img
+{
+background-color: Blue;
+}
+.img1{
+background-color:Grey;
+}
+.new{
+background-color:white;
+border:20px solid white;
+}
